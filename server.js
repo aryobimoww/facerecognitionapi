@@ -72,7 +72,7 @@ users: [
 app.use(bodyParser.json());
 app.use(cors());
 
-app.get('/',(req,res) => {res.send(postgres.users)})
+app.get('/',(req,res) => {res.send('its working')})
 app.post('/signin', (req,res) => {signin.handleSignin(req,res,postgres,bcrypt)})
 app.post('/register',(req,res) => {register.handleRegister(req, res, postgres,bcrypt)})
 app.get('/profile/:id', (req,res) => {profile.handleProfile(req,res,postgres)} )
